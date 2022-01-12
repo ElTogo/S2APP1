@@ -1,5 +1,5 @@
-graphicus-01: forme.o couche.o canevas.o tests.o graphicus-01.o rectangle.o
-	g++ -o graphicus-01 graphicus-01.o forme.o couche.o canevas.o tests.o rectangle.o
+graphicus-01: forme.o couche.o canevas.o tests.o graphicus-01.o rectangle.o carre.o
+	g++ -o graphicus-01 graphicus-01.o forme.o couche.o canevas.o tests.o rectangle.o carre.o
 	
 graphicus-01.o: graphicus-01.cpp tests.h canevas.h forme.h coordonnee.h
 	g++ graphicus-01.cpp -g -c
@@ -15,6 +15,9 @@ couche.o: couche.cpp couche.h
 
 rectangle.o: rectangle.cpp rectangle.h forme.h coordonnee.h
 	g++ rectangle.cpp -g -c
+	
+carre.o: carre.cpp carre.h rectangle.h forme.h coordonnee.h
+	g++ carre.cpp -g -c
 	
 forme.o: forme.cpp forme.h coordonnee.h
 	g++ forme.cpp -g -c

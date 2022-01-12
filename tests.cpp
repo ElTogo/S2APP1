@@ -13,8 +13,11 @@ void Tests::tests_unitaires_formes()
 {
    std::ostream & os = std::cout;
    
-   Rectangle rectangle(2, 2, 2, 2);
-   rectangle.afficher( os);
+   Rectangle rectangle(1,2,3,4);
+   rectangle.afficher(os);
+   
+   Carre carre(2,3,4);
+   carre.afficher(os);
 }
 
 void Tests::tests_unitaires_vecteur()

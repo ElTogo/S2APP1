@@ -7,9 +7,8 @@
  *    fait partie de la distribution de Graphicus.
 ********/
 
-#include <iostream>
 #include "canevas.h"
-#include "rectangle.h"
+#include "carre.h"
 
 using namespace std;
 

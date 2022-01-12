@@ -1,4 +1,6 @@
-#include <iostream>
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
+
 #include "forme.h"
 
 class Rectangle: public Forme
@@ -8,7 +10,7 @@ public:
 	void setLongueur(double);
 	double getHauteur();
 	void setHauteur(double);
-	double aire();
+	virtual double aire();
 	virtual void afficher(ostream & s);
 	
 	Rectangle();
@@ -16,8 +18,10 @@ public:
 	Rectangle(Coordonnee);
 	Rectangle(double, double, Coordonnee);
 	Rectangle(double, double, int, int);
-	~Rectangle();	
-private: 
+	virtual ~Rectangle();	
+protected: 
 	double longueur;
 	double hauteur;
 };
+
+#endif
