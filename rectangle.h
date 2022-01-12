@@ -9,7 +9,7 @@ public:
 	double getHauteur();
 	void setHauteur(double);
 	double aire();
-	void afficher(ostream & s);
+	virtual void afficher(ostream & s);
 	
 	Rectangle();
 	Rectangle(double, double);

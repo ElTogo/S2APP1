@@ -11,7 +11,10 @@
 
 void Tests::tests_unitaires_formes()
 {
-   // Tests sur les formes geometriques
+   std::ostream & os = std::cout;
+   
+   Rectangle rectangle(2, 2, 2, 2);
+   rectangle.afficher( os);
 }
 
 void Tests::tests_unitaires_vecteur()

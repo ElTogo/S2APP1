@@ -27,7 +27,7 @@ double Rectangle::aire(void)
 
 void Rectangle::afficher(ostream & s)
 {
-	cout<<longueur<<" " << hauteur<< " " << ancrage.x<<" "<<ancrage.y<<endl;
+	s<<"Rectangle(x="<<ancrage.x<<", y="<<ancrage.y<<", l="<<longueur<<", h="<<hauteur<<", aire="<<aire()<<")"<<endl;
 }
 
 Rectangle::Rectangle()

@@ -6,20 +6,18 @@
  *    fichier fait partie de la distribution de Graphicus.
 ********/
 #include "tests.h"
-#include "rectangle.h"
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-   //Tests tests;
+   Tests tests;
    
    //tests.tests_application();
    
-   std::ostream s;
-   
-   Rectangle rectangle;
-   rectangle.afficher();
+   tests.tests_unitaires_formes();
    return 0;
 }
 
