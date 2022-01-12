@@ -18,6 +18,9 @@ void Tests::tests_unitaires_formes()
    
    Carre carre(2,3,4);
    carre.afficher(os);
+   
+   Cercle cercle( 3.85, 1, 5);
+   cercle.afficher(os);
 }
 
 void Tests::tests_unitaires_vecteur()

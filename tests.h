@@ -9,6 +9,7 @@
 
 #include "canevas.h"
 #include "carre.h"
+#include "cercle.h"
 
 using namespace std;
 
