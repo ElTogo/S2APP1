@@ -25,9 +25,9 @@ void Tests::tests_unitaires_formes()
 
 void Tests::tests_unitaires_vecteur()
 {
-   Vecteur *vecteur = new Vecteur(2);
-   Rectangle *rectangle = new Rectangle(1,1,1,1);
-   vecteur->push_back(rectangle);
+	Vecteur *vecteur = new Vecteur(2);
+	Rectangle *rectangle = new Rectangle(1,1,1,1);
+	vecteur->push_back(rectangle);
 }
 
 void Tests::tests_unitaires_couche()

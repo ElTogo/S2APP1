@@ -21,7 +21,7 @@ using namespace std;
 class Couche
 {
 protected:
-	Vecteur couche;
+	Vecteur *couche = new Vecteur();
 	int etat;
 public:
 	Couche();

@@ -26,18 +26,22 @@ Vecteur::~Vecteur()
 	
 bool Vecteur::push_back(Forme* forme)
 {
+	if (forme = nullptr) {return false;}
 	if (taille + 1 >= capatite)
 	{
 		capatite *= 2;
 		Forme **temp = new Forme*[capatite];
 		for (int i = 0; i < taille; i++)
 		{
-			temp[i]=*tableau[i];
+			Forme* _forme;
+			_forme=*tableau[i];
+			temp[i]=_forme;
 		}
 		*tableau=temp;
 	}
 	tableau[taille]=&forme;
 	taille++;
+	cout<<endl;
 	return true;
 }
 
