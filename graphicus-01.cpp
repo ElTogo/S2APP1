@@ -18,6 +18,7 @@ int main()
    //tests.tests_application();
    
    tests.tests_unitaires_formes();
+   tests.tests_unitaires_vecteur();
    return 0;
 }
 

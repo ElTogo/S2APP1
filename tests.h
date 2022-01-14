@@ -10,6 +10,7 @@
 #include "canevas.h"
 #include "carre.h"
 #include "cercle.h"
+#include "vecteur.h"
 
 using namespace std;
 
