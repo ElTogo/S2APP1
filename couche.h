@@ -10,10 +10,30 @@
 
 #ifndef COUCHE_H
 #define COUCHE_H
+#define INITIALISEE 0
+#define ACTIVE 1
+#define INACTIVE 2
+
+#include <iostream>
+usn=ing namespace std;
 
 class Couche
 {
-   // Classe a completer
+protected:
+	Vecteur couche;
+	int etat;
+public:
+	Couche();
+	virtual ~Couche();	
+	
+	bool ajouter(*Forme); //#3
+	*Forme retirer(int) //#4
+	*Forme recevoir(int); //#5
+	double aireTotal(); //#6
+	bool translater(int, int); //#7, les int sont les coordonnee
+	bool reinitialiser(int); //#8, le int est l'etat voir define^
+	bool setEtat(int); //#9, le int est l'etat voir define^
+	void afficher(ostream &); // #10
 };
 
 #endif
