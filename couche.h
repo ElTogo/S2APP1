@@ -15,7 +15,8 @@
 #define INACTIVE 2
 
 #include <iostream>
-usn=ing namespace std;
+#include "vecteur.h"
+using namespace std;
 
 class Couche
 {
@@ -26,9 +27,9 @@ public:
 	Couche();
 	virtual ~Couche();	
 	
-	bool ajouter(*Forme); //#3
-	*Forme retirer(int) //#4
-	*Forme recevoir(int); //#5
+	bool ajouter(Forme*); //#3
+	Forme* retirer(int); //#4
+	Forme* recevoir(int); //#5
 	double aireTotal(); //#6
 	bool translater(int, int); //#7, les int sont les coordonnee
 	bool reinitialiser(int); //#8, le int est l'etat voir define^
