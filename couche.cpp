@@ -79,3 +79,8 @@ void Couche::afficher(ostream & s)
 	else if (etat==ACTIVE && vecteur.getTaille()==0){s<<"Couche vide"<<endl;}
 	else if (etat==ACTIVE && vecteur.getTaille()!=0) {vecteur.afficher(s);}
 }
+
+int Couche::getEtat()
+{
+	return etat;
+}

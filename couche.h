@@ -35,6 +35,7 @@ public:
 	bool reinitialiser(); //#8, le int est l'etat voir define^
 	bool setEtat(int); //#9, le int est l'etat voir define^
 	void afficher(ostream &); // #10
+	int getEtat();
 };
 
 #endif

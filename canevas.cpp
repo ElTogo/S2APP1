@@ -55,6 +55,8 @@ bool Canevas::ajouterForme(Forme *p_forme)
    	}
    	
    }
+   couches[coucheActive].ajouter(p_forme);
+   
    return true;
 }
 
