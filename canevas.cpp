@@ -10,6 +10,8 @@
 
 Canevas::Canevas()
 {
+	coucheActive = 0;
+	couches[0].setEtat(ACTIVE);
 }
 
 Canevas::~Canevas()
@@ -18,21 +20,41 @@ Canevas::~Canevas()
 
 bool Canevas::reinitialiser()
 {
-   return true;
+	for (int i=0; i<MAX_COUCHES;i++)
+   	{
+   		couches[i+1].reinitialiser();
+   	}
+   	return true;
 }
 
 bool Canevas::activerCouche(int index)
 {
+   for (int i = 0; i<MAX_COUCHES;i++)
+   {
+   	couches[i+1].setEtat(INACTIVE);
+   }
+   couches[index].setEtat(ACTIVE);
+   
    return true;
 }
 
 bool Canevas::cacherCouche(int index)
 {
+   couches[index].setEtat(INACTIVE);
    return true;
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
+   
+   for (int i =0; i<MAX_COUCHES; i++)
+   {
+   	if (couches[i+1].getEtat() == ACTIVE)
+   	{
+   		coucheActive=i+1;
+   	}
+   	
+   }
    return true;
 }
 

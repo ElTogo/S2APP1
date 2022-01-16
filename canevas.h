@@ -38,6 +38,7 @@ public:
 
 private:
      Couche couches[MAX_COUCHES];
+     int coucheActive = 0;
 };
 
 #endif
