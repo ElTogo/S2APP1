@@ -2,22 +2,22 @@
 
 Vecteur::Vecteur()
 {
-	taille=1;
-	capatite=1;
-	tableau[0] = new Forme*[1];
+	taille=0;
+	capacite=1;
+	tableau = new Forme*[1];
 }
 
-Vecteur::Vecteur(int _taille)
+Vecteur::Vecteur(int _capacite)
 {
-	taille=_taille;
-	capatite=_taille;
-	tableau[0] = new Forme*[capatite];
+	taille=0;
+	capacite=_capacite;
+	tableau = new Forme*[capacite];
 }
 
 
 Vecteur::~Vecteur()
 {
-	for (int i = 0; i < taille; i++)
+	for (int i = 0; i < capacite; i++)
 	{
 		delete tableau[i];
 	}
@@ -26,57 +26,69 @@ Vecteur::~Vecteur()
 	
 bool Vecteur::push_back(Forme* forme)
 {
-	if (forme = nullptr) {return false;}
-	if (taille + 1 >= capatite)
+	if (forme == nullptr) {return false;}
+	if (taille>= capacite)
 	{
-		capatite *= 2;
-		Forme **temp = new Forme*[capatite];
+		capacite *= 2;
+		Forme **temp = new Forme*[capacite];
 		for (int i = 0; i < taille; i++)
 		{
-			Forme* _forme;
-			_forme=*tableau[i];
-			temp[i]=_forme;
+			temp[i]=tableau[i];
 		}
-		*tableau=temp;
+		tableau=temp;
 	}
-	tableau[taille]=&forme;
+	tableau[taille]=forme;
 	taille++;
-	cout<<endl;
 	return true;
 }
 
-bool Vecteur::pop_back(int index)
+Forme* Vecteur::pop_back(int index)
 {
-	return false;
+	Forme* temp = tableau[index];
+	for (int i = index; i < taille; i++)
+	{
+		tableau[i]=tableau[i+1];
+	}
+	taille--;
+	return temp;
 }
 
 Forme* Vecteur::get(int index)
 {
-	return nullptr;
+	if(index>=taille){return nullptr;}
+	else{return tableau[index];}
 }
 
 bool Vecteur::vecteurVide()
 {
-	return false;
+	if (taille == 0){return true;}
+	else{return false;}
 }
 
 void Vecteur::viderVecteur()
 {
-	
+	for (int i = 0; i < taille; i++)
+	{
+		delete tableau[i];
+	}
+	taille=0;
 }
 
 int Vecteur::getTaille()
 {
-	return 0;
+	return taille;
 }
 
-int Vecteur::getCapatite()
+int Vecteur::getCapacite()
 {
-	return 0;
+	return capacite;
 }
 
-void Vecteur::afficher(ostream &)
+void Vecteur::afficher(ostream & os)
 {
-	
+	for (int i = 0; i < taille; i++)
+	{
+		tableau[i]->afficher(os);
+	}
 }
 

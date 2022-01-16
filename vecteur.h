@@ -10,20 +10,20 @@ class Vecteur
 {
 protected:
 	int taille;
-	int capatite;
-	Forme **tableau[];
+	int capacite;
+	Forme** tableau;
 public:
 	Vecteur();
 	Vecteur(int);
 	virtual ~Vecteur();
 	
 	bool push_back(Forme*);
-	bool pop_back(int);
+	Forme* pop_back(int);
 	Forme* get(int);
 	bool vecteurVide();
 	void viderVecteur();
 	int getTaille();
-	int getCapatite();
+	int getCapacite();
 	void afficher(ostream &);
 };
 

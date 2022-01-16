@@ -21,7 +21,7 @@ using namespace std;
 class Couche
 {
 protected:
-	Vecteur *couche = new Vecteur();
+	Vecteur vecteur;
 	int etat;
 public:
 	Couche();
@@ -32,7 +32,7 @@ public:
 	Forme* recevoir(int); //#5
 	double aireTotal(); //#6
 	bool translater(int, int); //#7, les int sont les coordonnee
-	bool reinitialiser(int); //#8, le int est l'etat voir define^
+	bool reinitialiser(); //#8, le int est l'etat voir define^
 	bool setEtat(int); //#9, le int est l'etat voir define^
 	void afficher(ostream &); // #10
 };
