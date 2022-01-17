@@ -14,10 +14,10 @@ using namespace std;
 int main()
 {
    Tests tests;
-   
-   //tests.tests_unitaires();
-   //tests.tests_unitaires_canevas();
    tests.tests_application_cas_01();
+   //tests.tests_unitaires();
+   
+  
    return 0;
 }
 

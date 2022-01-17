@@ -13,6 +13,7 @@
 #define INITIALISEE 0
 #define ACTIVE 1
 #define INACTIVE 2
+#define CACHE 3
 
 #include <iostream>
 #include "vecteur.h"

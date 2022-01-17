@@ -16,7 +16,6 @@ Couche::Couche()
 
 Couche::~Couche()
 {
-	//vecteur.viderVecteur();
 }
 
 
@@ -61,22 +60,20 @@ bool Couche::translater(int x, int y)
 
 bool Couche::reinitialiser()
 {
-	//if (etat == INITIALISEE) {return false;}
 	vecteur.viderVecteur(); return true;
 }
 
 bool Couche::setEtat(int _etat)
 {
-	if (_etat != ACTIVE && _etat != INACTIVE){return false;}
-	else {etat = _etat; return true;}
+	etat = _etat; return true;
 }
 
 void Couche::afficher(ostream & s)
 {
 	if (etat==INITIALISEE){s<<"Couche initialisee"<<endl;}
-	else if (etat==INACTIVE){s<<"Couche cachee"<<endl;}
-	else if (etat==ACTIVE && vecteur.getTaille()==0){s<<"Couche vide"<<endl;}
-	else if (etat==ACTIVE && vecteur.getTaille()!=0) {vecteur.afficher(s);}
+	else if (etat==CACHE){s<<"Couche cachee"<<endl;}
+	else if ((etat==ACTIVE||etat==INACTIVE) && vecteur.getTaille()==0){s<<"Couche vide"<<endl;}
+	else if ((etat==ACTIVE||etat==INACTIVE) && vecteur.getTaille()!=0) {vecteur.afficher(s);}
 }
 
 int Couche::getEtat()

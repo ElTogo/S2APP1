@@ -80,7 +80,7 @@ void Tests::tests_unitaires_couche()
 	couche.afficher(os);
 	cout<<"Completer"<<endl<<endl;
 	
-	cout<<"Fonction recevoir (index 1) : "<<endl;
+	cout<<"Fonction recevoir (index 0) : "<<endl;
 	Forme* formeRecevoir = couche.recevoir(0);
 	cout<<"Affichage de la forme : "<<endl;
 	if (formeRecevoir != nullptr){formeRecevoir->afficher(os);}else{cout<<"ERREUR"<<endl;}
@@ -129,21 +129,39 @@ void Tests::tests_unitaires_canevas()
 	std::ostream & os = std::cout;
 	Canevas canevas;
 	
-	cout<<"Réinitialisation du Canevas"<<endl;
+	cout<<endl<<"Réinitialisation du Canevas"<<endl;
 	canevas.reinitialiser();
 	
-	cout<<"Activer couche"<<endl;
+	cout<<endl<<"Activer couche"<<endl;
 	canevas.activerCouche(0);
 	cout<<"La couche 0 est activer"<<endl;
 	
-	cout<<"Cacher couche"<<endl;
+	cout<<endl<<"Cacher couche"<<endl;
 	canevas.cacherCouche(0);
 	cout<<"La couche 0 est cacher"<<endl;
 	
-	/*cout<<"Ajouter forme"<<endl;
-	canevas.ajouterForme(Cercle);*/
+	cout<<endl<<"Ajouter forme (dans plusieurs couche)"<<endl;
+	canevas.activerCouche(1);
+	Forme* cercle = new Cercle(1,2,3);
+	canevas.ajouterForme(cercle);
+	canevas.activerCouche(2);
+	Forme* rectangle = new Rectangle(2,3,4,5);
+	canevas.ajouterForme(rectangle);
+	canevas.afficher(os);
 	
-	cout<<"prout"<<endl;
+	cout<<endl<<"Aire"<<endl;
+	cout<<"L'aire est de "<<canevas.aire()<<endl;
+	
+	cout<<endl<<"Translater (2,2)"<<endl;
+	canevas.translater(2,2);
+	canevas.afficher(os);
+	
+	cout<<endl<<"Retirer forme"<<endl;
+	canevas.retirerForme(0);
+	canevas.afficher(os);
+
+	cout<<BARRE;
+	
 }
 
 void Tests::tests_unitaires()
@@ -166,14 +184,15 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
+	std::ostream & os = std::cout;
 	Canevas canevas;
 	cout<<"ETAPE 1 à 6"<<endl;
    cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
    
-    Rectangle* rectangle = new Rectangle(0,0,2,3);
-   Rectangle* rectangle2 = new Rectangle(0,0,4,5);
-   Carre* carre = new Carre(2,3,4);
-   Cercle* cercle = new Cercle(7,8,6);
+    Rectangle* rectangle = new Rectangle(2,3,0,0);
+   Rectangle* rectangle2 = new Rectangle(4,5,0,0);
+   Carre* carre = new Carre(4,2,3);
+   Cercle* cercle = new Cercle(6,7,8);
    
   
    canevas.activerCouche(1);
@@ -187,10 +206,38 @@ void Tests::tests_application_cas_01()
      canevas.ajouterForme(rectangle2);
      canevas.afficher(os);
      cout<<"L'aire est :"<<canevas.aire()<<endl;
-         
-	
    
-   // Il faut ajouter les operations realisant ce scenario de test.
+   
+  cout<<endl<<"ETAPES 7 A 13"<<endl;
+  canevas.activerCouche(0);
+  Forme* forme = new Rectangle;
+  canevas.ajouterForme(forme);
+  Forme* forme2 = new Carre;
+  canevas.ajouterForme(forme2);
+  Forme* forme3 = new Cercle;
+  canevas.ajouterForme(forme3);
+  canevas.activerCouche(1);
+  canevas.translater(5,5);
+  Forme* forme4 = new Rectangle(2,3,5,5);
+  canevas.ajouterForme(forme4);
+  Forme* forme5 = new Carre(4,7,8);
+  canevas.ajouterForme(forme5);
+  Forme* forme6 = new Cercle(6,12,13);
+  canevas.ajouterForme(forme6);
+  canevas.afficher(os);
+  cout<<"L'aire est de "<<canevas.aire()<<endl;
+  
+   
+  cout<<endl<<"ETAPES 14 A 16"<<endl;
+  canevas.activerCouche(1);
+  canevas.retirerForme(0);
+  canevas.afficher(os);
+   
+  cout<<endl<<"ETAPES 17 A 19"<<endl;
+  canevas.reinitialiser();
+  canevas.afficher(os);
+  cout<<"L'aire est de "<<canevas.aire()<<endl<<endl;
+  
 }
 
 void Tests::tests_application_cas_02()
