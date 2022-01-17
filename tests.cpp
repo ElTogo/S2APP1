@@ -142,6 +142,8 @@ void Tests::tests_unitaires_canevas()
 	
 	/*cout<<"Ajouter forme"<<endl;
 	canevas.ajouterForme(Cercle);*/
+	
+	cout<<"prout"<<endl;
 }
 
 void Tests::tests_unitaires()

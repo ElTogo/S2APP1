@@ -16,7 +16,7 @@ Couche::Couche()
 
 Couche::~Couche()
 {
-	vecteur.viderVecteur();
+	//vecteur.viderVecteur();
 }
 
 
@@ -61,14 +61,13 @@ bool Couche::translater(int x, int y)
 
 bool Couche::reinitialiser()
 {
-	if (etat == INITIALISEE) {return false;}
-	else{vecteur.viderVecteur(); return true;}
+	//if (etat == INITIALISEE) {return false;}
+	vecteur.viderVecteur(); return true;
 }
 
 bool Couche::setEtat(int _etat)
 {
 	if (_etat != ACTIVE && _etat != INACTIVE){return false;}
-	else if (etat == _etat) {return false;}
 	else {etat = _etat; return true;}
 }
 

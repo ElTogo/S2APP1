@@ -33,38 +33,34 @@ bool Canevas::activerCouche(int index)
    for (int i = 0; i<=MAX_COUCHES;i++)
    {
    	couches[i].setEtat(INACTIVE);
-   }
-   couches[index].setEtat(ACTIVE);
-   
-   return true;
+   }   
+   coucheActive = index;
+   return couches[index].setEtat(ACTIVE);
 }
 
 bool Canevas::cacherCouche(int index)
 {
-   couches[index].setEtat(INACTIVE);
-   return true;
+   return couches[index].setEtat(INACTIVE);
 }
 
 bool Canevas::ajouterForme(Forme *p_forme)
 {
-   
-   for (int i =0; i<=MAX_COUCHES; i++)
+   /*for (int i =0; i<=MAX_COUCHES; i++)
    {
    	if (couches[i].getEtat() == ACTIVE)
    	{
-   		coucheActive=i+1;
+   		coucheActive=i;
    	}
    	
-   }
-   couches[coucheActive].ajouter(p_forme);
-   
-   return true;
+   }*/
+   return couches[coucheActive].ajouter(p_forme);
 }
 
 bool Canevas::retirerForme(int index)
 {
-   couches[index].retirer(index);
-   return true;
+   Forme* forme = couches[index].retirer(index);
+   if (forme == nullptr){return false;}
+   else {return true;}
 }
 
 double Canevas::aire()
@@ -82,14 +78,13 @@ double Canevas::aire()
 
 bool Canevas::translater(int deltaX, int deltaY)
 {
-   couches[coucheActive].translater(deltaX,deltaY);
-   return true;
+   return couches[coucheActive].translater(deltaX,deltaY);
 }
 
 void Canevas::afficher(ostream & s)
 {
 	for (int i=0; i<=MAX_COUCHES;i++)
 	{
-		s << "----- Couche "<<i+1<<endl;
+		s << "----- Couche "<<i<<endl;
 	}
 }
