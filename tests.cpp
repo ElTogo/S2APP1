@@ -166,14 +166,15 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
+    std::ostream & os = std::cout;
 	Canevas canevas;
 	cout<<"ETAPE 1 à 6"<<endl;
-   cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
+   //cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
    
-    Rectangle* rectangle = new Rectangle(0,0,2,3);
-   Rectangle* rectangle2 = new Rectangle(0,0,4,5);
-   Carre* carre = new Carre(2,3,4);
-   Cercle* cercle = new Cercle(7,8,6);
+    Rectangle* rectangle = new Rectangle(2,3,0,0);
+   Rectangle* rectangle2 = new Rectangle(4,5,0,0);
+   Carre* carre = new Carre(4,2,3);
+   Cercle* cercle = new Cercle(6,7,8);
    
   
    canevas.activerCouche(1);
