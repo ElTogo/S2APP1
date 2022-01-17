@@ -58,10 +58,7 @@ double Canevas::aire()
    double aireTot = 0;
 	for (int i = 0; i<=MAX_COUCHES;i++) 
 	{ 
-		for (int i = 0; i <= MAX_COUCHES; i++)
-		{
-			aireTot += couches[i].aireTotal();
-		}
+		aireTot += couches[i].aireTotal();
 	}
 	return aireTot;
 }

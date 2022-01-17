@@ -17,11 +17,9 @@ Vecteur::Vecteur(int _capacite)
 
 Vecteur::~Vecteur()
 {
-	for (int i = 0; i < taille; i++)
-	{
-		delete tableau[i];
-	}
-	//delete tableau;
+	cout<<"destructeur vecteur"<<endl;
+	//this->viderVecteur();
+	cout<<"destructeur vecteur terminer"<<endl;
 }
 	
 bool Vecteur::push_back(Forme* forme)
@@ -67,11 +65,13 @@ bool Vecteur::vecteurVide()
 
 void Vecteur::viderVecteur()
 {
-	/*for (int i = 0; i < taille; i++)
+	cout<<"viderVecteur"<<endl;
+	for (int i = 0; i < taille; i++)
 	{
 		delete tableau[i];
-	}*/
+	}
 	taille=0;
+	cout<<"viderVecteur termine"<<endl;
 }
 
 int Vecteur::getTaille()

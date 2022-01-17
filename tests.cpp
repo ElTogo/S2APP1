@@ -218,12 +218,6 @@ void Tests::tests_application_cas_01()
   canevas.ajouterForme(forme3);
   canevas.activerCouche(1);
   canevas.translater(5,5);
-  Forme* forme4 = new Rectangle(2,3,5,5);
-  canevas.ajouterForme(forme4);
-  Forme* forme5 = new Carre(4,7,8);
-  canevas.ajouterForme(forme5);
-  Forme* forme6 = new Cercle(6,12,13);
-  canevas.ajouterForme(forme6);
   canevas.afficher(os);
   cout<<"L'aire est de "<<canevas.aire()<<endl;
   
