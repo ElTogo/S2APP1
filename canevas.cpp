@@ -30,10 +30,7 @@ bool Canevas::reinitialiser()
 
 bool Canevas::activerCouche(int index)
 {
-   for (int i = 0; i<=MAX_COUCHES;i++)
-   {
-   	couches[i].setEtat(INACTIVE);
-   }   
+   couches[coucheActive].setEtat(INACTIVE);
    coucheActive = index;
    return couches[index].setEtat(ACTIVE);
 }
@@ -86,5 +83,7 @@ void Canevas::afficher(ostream & s)
 	for (int i=0; i<=MAX_COUCHES;i++)
 	{
 		s << "----- Couche "<<i<<endl;
+		couches[i].afficher(s);
 	}
+	
 }

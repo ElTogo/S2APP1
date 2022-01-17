@@ -140,8 +140,18 @@ void Tests::tests_unitaires_canevas()
 	canevas.cacherCouche(0);
 	cout<<"La couche 0 est cacher"<<endl;
 	
-	/*cout<<"Ajouter forme"<<endl;
-	canevas.ajouterForme(Cercle);*/
+	canevas.activerCouche(1);
+	
+	cout<<"Ajouter forme"<<endl;
+	Forme* cercle = new Cercle(1,2,3);
+	Forme* rectangle = new Rectangle;
+	Forme* carre = new Carre(3,4,5);
+	canevas.ajouterForme(cercle);
+	canevas.ajouterForme(rectangle);
+	canevas.ajouterForme(carre);
+	cout<<"Affichage : "<<endl;
+	canevas.afficher(os);
+	
 	
 	cout<<"prout"<<endl;
 }
