@@ -140,18 +140,8 @@ void Tests::tests_unitaires_canevas()
 	canevas.cacherCouche(0);
 	cout<<"La couche 0 est cacher"<<endl;
 	
-	canevas.activerCouche(1);
-	
-	cout<<"Ajouter forme"<<endl;
-	Forme* cercle = new Cercle(1,2,3);
-	Forme* rectangle = new Rectangle;
-	Forme* carre = new Carre(3,4,5);
-	canevas.ajouterForme(cercle);
-	canevas.ajouterForme(rectangle);
-	canevas.ajouterForme(carre);
-	cout<<"Affichage : "<<endl;
-	canevas.afficher(os);
-	
+	/*cout<<"Ajouter forme"<<endl;
+	canevas.ajouterForme(Cercle);*/
 	
 	cout<<"prout"<<endl;
 }
@@ -167,6 +157,8 @@ void Tests::tests_unitaires()
 
 void Tests::tests_application()
 {
+  
+  
    // Fait tous les tests applicatifs
    tests_application_cas_01();
    tests_application_cas_02();
@@ -174,7 +166,30 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
-   cout << "TESTS APPLICATION (CAS 01)" << endl; 
+	Canevas canevas;
+	cout<<"ETAPE 1 à 6"<<endl;
+   cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
+   
+    Rectangle* rectangle = new Rectangle(0,0,2,3);
+   Rectangle* rectangle2 = new Rectangle(0,0,4,5);
+   Carre* carre = new Carre(2,3,4);
+   Cercle* cercle = new Cercle(7,8,6);
+   
+  
+   canevas.activerCouche(1);
+   
+   canevas.ajouterForme(rectangle);
+   canevas.ajouterForme(carre);
+   canevas.ajouterForme(cercle);
+  
+  
+    canevas.activerCouche(2);
+     canevas.ajouterForme(rectangle2);
+     canevas.afficher(os);
+     cout<<"L'aire est :"<<canevas.aire()<<endl;
+         
+	
+   
    // Il faut ajouter les operations realisant ce scenario de test.
 }
 
