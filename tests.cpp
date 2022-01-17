@@ -184,10 +184,14 @@ void Tests::tests_application()
 
 void Tests::tests_application_cas_01()
 {
+<<<<<<< HEAD
 	std::ostream & os = std::cout;
+=======
+    std::ostream & os = std::cout;
+>>>>>>> 944954a046e9ce1065e9cc5d841081d2cf4d6861
 	Canevas canevas;
 	cout<<"ETAPE 1 à 6"<<endl;
-   cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
+   //cout << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
    
     Rectangle* rectangle = new Rectangle(2,3,0,0);
    Rectangle* rectangle2 = new Rectangle(4,5,0,0);
