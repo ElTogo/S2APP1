@@ -125,7 +125,23 @@ void Tests::tests_unitaires_couche()
 
 void Tests::tests_unitaires_canevas()
 {
-   
+	cout<<"TESTS UNITAIRES DE CANEVAS"<<endl<<endl;
+	std::ostream & os = std::cout;
+	Canevas canevas;
+	
+	cout<<"Réinitialisation du Canevas"<<endl;
+	canevas.reinitialiser();
+	
+	cout<<"Activer couche"<<endl;
+	canevas.activerCouche(0);
+	cout<<"La couche 0 est activer"<<endl;
+	
+	cout<<"Cacher couche"<<endl;
+	canevas.cacherCouche(0);
+	cout<<"La couche 0 est cacher"<<endl;
+	
+	/*cout<<"Ajouter forme"<<endl;
+	canevas.ajouterForme(Cercle);*/
 }
 
 void Tests::tests_unitaires()
