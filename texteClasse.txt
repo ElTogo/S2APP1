@@ -1,0 +1,116 @@
+Classe Couche
+
+-vecteur : Vecteur
+-etat : int
+
++ajouter(Forme* forme) : bool
++retirer(int index) : Forme*
++recevoir(int index) : Forme*
++aireTotal() : double
++translater(int x, int y) : bool
++reinitialiser() : bool
++setEtat(int etat) : bool
++getEtat() : int
++afficher(ostream & os)
+
+
+
+Classe Canevas
+
+-couches[5] : Couche
+-coucheActive : int
+
++reinitialiser() : bool
++activerCouche(int index) : bool
++cacherCouche(int index) : bool
++ajouterForme(Forme *p_forme) : bool
++retirerForme(int index) : bool
++aire() : double
++translater(int deltaX, int deltaY) : bool
++afficher(ostream & s)
+
+
+
+Classe Vecteur
+
+-taille : int
+-capacite : int
+-tableau : Forme**
+
++push_back(Forme* forme) : bool
++pop_back(int index) : Forme*
++get(int index) : Forme*
++vecteurVide() : bool
++viderVecteur()
++getTaille() : int
++getCapacite : int
++afficher(ostream & s)
+
+
+
+Classe Carre
+
+-ancrage : Coordonnee
+-cote : double
+
++getCote() : double
++setCote(double _cote)
++aire() : double
++afficher(ostream & s)
+
+
+
+
+
+Classe Cercle
+
+-ancrage : Coordonnee
+-cote : double
+
++getRayon() : double
++setRayon(double _rayon)
++aire() : double
++afficher(ostream & s)
+
+Classe coordonne
+
++x
++y
+
+
+
+
+
+
+
+Classe Forme {abstraite}
+
+-ancrage : Coordonnee
+
++translater(int x, int y)
++getAncrage() : Coordonnee
++setAncrage(Coordonnee c)
++aire() : double
+afficher(ostream & s)
+
+
+
+
+
+
+
+
+Classe Rectangle
+
+-longueur : double
+-hauteur : double
+
++getLongueur() : double
++setLongueur(double _longueur)
++getHauteur() : double
++setHauteur(double _hauteur)
++aire() : double
++afficher(ostream & s)
+
+
+

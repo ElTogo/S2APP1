@@ -17,10 +17,10 @@ class Tests
 {
 public:
    // Methodes pour les tests unitaires des classes
-   void tests_unitaires_formes();
-   void tests_unitaires_vecteur();
-   void tests_unitaires_couche();
-   void tests_unitaires_canevas();
+   void tests_unitaires_formes(ostream &);
+   void tests_unitaires_vecteur(ostream &);
+   void tests_unitaires_couche(ostream &);
+   void tests_unitaires_canevas(ostream &);
    void tests_unitaires(); // Appel de tous les tests unitaires
 
    // Methodes pour les tests unitaires des classes
