@@ -183,6 +183,8 @@ void Tests::tests_application()
 void Tests::tests_application_cas_01()
 {
 	Canevas canevas;
+
+	std::ostream & os = std::cout;
 	os<<endl<<"ETAPE 1 à 6"<<endl<<endl;
    //os << "TESTS APPLICATION (CAS 01)" << endl<<endl; 
    
@@ -253,7 +255,6 @@ void Tests::tests_application_cas_01()
 }
 
 void Tests::tests_application_cas_02()
-{
-   os << "TESTS APPLICATION (CAS 02)" << endl;  
+{ 
     // Il faut ajouter les operations realisant ce scenario de test.
 }
