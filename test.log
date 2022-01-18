@@ -1,0 +1,143 @@
+TESTS UNITAIRES DES FORMES
+
+Rectangle(x=3, y=4, l=1, h=2, aire=2)
+Carre (x=3, y=4, c=2, aire=4)
+Cercle (x=1 ,y=5 ,r=3.85 ,aire=46.5663)
+
+----------------------------------------
+
+
+TESTS UNITAIRES DE VECTEUR
+
+Fonction push back (3x): 
+Completer
+
+Fonction affichage :
+Rectangle(x=1, y=1, l=1, h=1, aire=1)
+Cercle (x=0 ,y=0 ,r=1 ,aire=3.14159)
+Carre (x=3, y=4, c=2, aire=4)
+completer
+
+Fcontion pop back (index 1) :
+Rectangle(x=1, y=1, l=1, h=1, aire=1)
+Carre (x=3, y=4, c=2, aire=4)
+completer
+
+Fonction vecteur vide et vider vecteur :
+vecteur non vide, completer
+Vidange du vecteur :
+Vidange du vecteur appele
+Vecteur vide, completer
+affichage du contenu (vecteur vide) : 
+Completer
+
+----------------------------------------
+
+
+TESTS UNITAIRES DE COUCHE
+
+Création de la couche
+Fonction ajouter : 
+Completer
+
+Fonction afficher (1->init, 2->fomres: 
+Couche initialisee
+Rectangle(x=4, y=5, l=2, h=3, aire=6)
+Cercle (x=3 ,y=4 ,r=2 ,aire=12.5664)
+Carre (x=3, y=2, c=4, aire=16)
+Rectangle(x=3, y=3, l=3, h=3, aire=9)
+Completer
+
+Fonction recevoir (index 0) : 
+Affichage de la forme : 
+Rectangle(x=4, y=5, l=2, h=3, aire=6)
+Affichage du reste : 
+Rectangle(x=4, y=5, l=2, h=3, aire=6)
+Cercle (x=3 ,y=4 ,r=2 ,aire=12.5664)
+Carre (x=3, y=2, c=4, aire=16)
+Rectangle(x=3, y=3, l=3, h=3, aire=9)
+Completer
+
+Fonction Retirer (index 1) : 
+Affichage de la forme : 
+Cercle (x=3 ,y=4 ,r=2 ,aire=12.5664)
+Affichage du reste : 
+Rectangle(x=4, y=5, l=2, h=3, aire=6)
+Carre (x=3, y=2, c=4, aire=16)
+Rectangle(x=3, y=3, l=3, h=3, aire=9)
+Completer
+
+Fonction aire total : 
+L'aire est de 31
+Completer
+
+Fonction translater : 
+Rectangle(x=14, y=15, l=2, h=3, aire=6)
+Carre (x=13, y=12, c=4, aire=16)
+Rectangle(x=13, y=13, l=3, h=3, aire=9)
+Completer
+
+Fonction reinitialiser : 
+Fonction appelee
+Affichage : 
+Couche vide
+Completer
+
+Fonction etat (1-couche vide, 2-couche caché): 
+Couche vide
+Couche vide
+Completer
+
+
+----------------------------------------
+
+
+TESTS UNITAIRES DE CANEVAS
+
+
+Réinitialisation du Canevas
+
+Activer couche
+La couche 0 est activer
+
+Cacher couche
+La couche 0 est cacher
+
+Ajouter forme (dans plusieurs couche)
+----- Couche 0
+Couche cachee
+----- Couche 1
+Cercle (x=2 ,y=3 ,r=1 ,aire=3.14159)
+----- Couche 2
+Rectangle(x=4, y=5, l=2, h=3, aire=6)
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+
+Aire
+L'aire est de 9.14159
+
+Translater (2,2)
+----- Couche 0
+Couche cachee
+----- Couche 1
+Cercle (x=2 ,y=3 ,r=1 ,aire=3.14159)
+----- Couche 2
+Rectangle(x=6, y=7, l=2, h=3, aire=6)
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+
+Retirer forme
+----- Couche 0
+Couche cachee
+----- Couche 1
+Cercle (x=2 ,y=3 ,r=1 ,aire=3.14159)
+----- Couche 2
+Couche vide
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
